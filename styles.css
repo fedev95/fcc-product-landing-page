@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        linear-gradient(rgba(255, 133, 239, 0.288), rgba(255, 133, 239, 0.288)),
+        url(https://i.ibb.co/hZQyc8c/page-background.jpg) center no-repeat fixed;
+    background-size: cover;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+#header {
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+#nav-bar {
+    background-color: darkcyan;
+    display: flex;
+    justify-content: space-around;
+    width: 610px;
+}
+
+.nav-link {
+    align-items: center;
+    background-color: darkgoldenrod;
+    color: white;
+    display: flex;
+    height: 80px;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: rgb(255, 76, 246);
+}
+
+#main {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 80px auto 0 auto;
+    max-width: 1000px;
+}
+
+.section-mark {
+    background-color: rgb(55, 204, 50);
+    float: left;
+    height: 80px;
+    position: relative;
+    top: -80px;
+    width: 10px;
+    visibility: hidden;
+}
+
+.section {
+    background-color: pink;
+    padding: 20px;
+}
+
+#form {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+#email {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#submit {
+    background-color: rgba(255, 76, 246, 0);
+    border: solid 2px rgb(255, 76, 246);
+    border-radius: 5px;
+    color: rgb(255, 76, 246);
+    font-weight: bold;
+    margin: auto;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+#submit:hover {
+    background-color: rgb(255, 76, 246);
+    color: white;
+    cursor: pointer;
+}
+
+#info-container {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    align-items: center;
+    background-color: rgb(62, 45, 65);
+    border-radius: 5px;
+    display: flex;
+    line-height: 30px;
+    padding: 20px;
+}
+
+.icon {
+    margin-right: 20px;
+    min-height: 80px;
+    min-width: 80px;
+    stroke: rgb(255, 76, 246);
+}
+
+#video-container {
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+}
+
+#packs-container {
+    background-color: forestgreen;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.pack {
+    align-items: center;
+    background-color: rgb(62, 45, 65);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.pack ul {
+    padding-left: 20px;
+}
+
+.buy-button {
+    background-color: rgba(255, 76, 246, 0);
+    border: 3px solid rgb(255, 76, 246);
+    border-radius: 5px;
+    color: rgb(255, 76, 246);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.buy-button:hover {
+    background-color: rgb(255, 76, 246);
+    color: white;
+    cursor: pointer;
+}
+
+#footer {
+    align-items: flex-end;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+#footer-links-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: rgb(255, 76, 246);;
+}
+
+#footer p {
+    color: grey;
+}
+
+#nav-bar,
+.nav-link,
+.section,
+#form,
+#info-container,
+#video-container,
+#packs-container {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    #packs-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 610px) {
+    #header,
+    #nav-bar {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #main {
+        margin-top: 200px;
+    }
+
+    .section-mark {
+        height: 200px;
+        top: -200px;
+    }
+
+    .nav-link {
+        display: flex;
+        height: 20px;
+        justify-content: center;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .info {
+        text-align: center;
+    }
+}
